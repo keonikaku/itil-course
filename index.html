@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ITIL 4 Foundation · Keoni Kakugawa</title>
+  <meta name="description" content="Untimed ITIL 4 Foundation practice — commit your pick and your reasoning before the answer shows." />
+  <!-- ?v= is a manual cache-buster: no build step, so bump it when styles.css changes -->
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#0a0e14" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="ITIL 4" />
+  <link rel="stylesheet" href="css/styles.css?v=4" />
+</head>
+<body>
+  <a class="skip-link" href="#app">Skip to content</a>
+
+  <header class="app-header">
+    <div class="header-inner">
+      <a class="brand" href="#/">
+        <span class="brand-mark">ITIL 4</span>
+        <span class="brand-text">Foundation Trainer</span>
+      </a>
+      <nav class="app-nav" aria-label="Primary">
+        <a class="nav-link" data-route="dashboard" href="#/">Board</a>
+        <a class="nav-link" data-route="mixed" href="#/mixed">Mixed practice</a>
+        <a class="nav-link" data-route="flashcards" href="#/flashcards">Flashcards</a>
+      </nav>
+    </div>
+    <div class="top-progress" role="progressbar" aria-label="Overall readiness">
+      <div id="top-progress-fill" class="top-progress-fill" style="width:0%"></div>
+    </div>
+    <div id="top-progress-label" class="top-progress-label">Overall readiness 0%</div>
+  </header>
+
+  <main class="app-main">
+    <div id="app" class="app-view" tabindex="-1">
+      <div class="loading">Loading your ITIL 4 prep…</div>
+    </div>
+
+    <!-- Persistent, always-in-DOM record of every submitted question + the reasoning typed for it.
+         Plain text on purpose: it is the readable trace of how the thinking is going. -->
+    <section id="coach-log" class="coach-log" aria-label="Reasoning log">
+      <div class="coach-log-head">
+        <div>
+          <h2 class="coach-log-title">Reasoning log</h2>
+          <p class="muted coach-log-sub">Every question you submit is recorded here: what you picked, why you said you picked it, and the keyed answer. Saved on this device.</p>
+        </div>
+        <button type="button" id="coach-log-clear" class="btn btn-ghost btn-sm">Clear log</button>
+      </div>
+      <div id="coach-log-entries" class="coach-log-entries">
+        <p class="muted coach-log-empty">No entries yet — answer a question, write your reasoning, and submit.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>Practice items written to the ITIL 4 Foundation syllabus — <strong>not</strong> real exam questions, and not an accredited training course.
+       The exam itself is 40 questions in 60 minutes, 26/40 to pass, closed book. Nothing here is timed on purpose.</p>
+  </footer>
+
+  <!-- ?v= is a manual cache-buster, same as the stylesheet: no build step, so bump it
+       whenever app.js changes or the browser will happily serve a stale copy. -->
+  <script src="js/app.js?v=5"></script>
+</body>
+</html>

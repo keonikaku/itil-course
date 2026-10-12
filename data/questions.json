@@ -1,0 +1,910 @@
+{
+  "name": "ITIL 4 Foundation Practice Bank",
+  "note": "Original items written to the official ITIL 4 Foundation syllabus. Not real exam questions. Several scenarios are drawn from Keoni's release and change management work so the abstractions have something concrete to hang on.",
+  "questions": [
+    {
+      "id": "kc-1", "module": "concepts",
+      "stem": "How does ITIL 4 define 'value'?",
+      "options": [
+        { "text": "The total cost of delivering a service over its lifetime.", "correct": false, "rationale": "That is lifetime cost, not value. Cost is one input to value, not value itself." },
+        { "text": "The perceived benefits, usefulness, and importance of something.", "correct": true, "rationale": "Value is explicitly defined as perceived — it depends on the stakeholder's judgement, not an objective measure." },
+        { "text": "The revenue a service generates for the service provider.", "correct": false, "rationale": "Revenue is a provider outcome. Value in ITIL is broader and is perceived by the consumer as well." },
+        { "text": "The measured performance of a service against its SLA targets.", "correct": false, "rationale": "That is service level performance. A service can hit every target and still be perceived as low value." }
+      ]
+    },
+    {
+      "id": "kc-2", "module": "concepts",
+      "stem": "What is the difference between an output and an outcome?",
+      "options": [
+        { "text": "An output is a deliverable of an activity; an outcome is a result for a stakeholder enabled by outputs.", "correct": true, "rationale": "Outputs are tangible deliverables. Outcomes are the results stakeholders actually care about, which outputs enable." },
+        { "text": "An output is measurable; an outcome is not.", "correct": false, "rationale": "Both can be measured. The distinction is deliverable versus result, not measurable versus unmeasurable." },
+        { "text": "An output belongs to the consumer; an outcome belongs to the provider.", "correct": false, "rationale": "Reversed and oversimplified — outputs are produced by activities, outcomes are realized by stakeholders." },
+        { "text": "They are synonyms in ITIL 4.", "correct": false, "rationale": "They are deliberately distinguished, and the exam tests that distinction." }
+      ]
+    },
+    {
+      "id": "kc-3", "module": "concepts",
+      "stem": "A release goes out on time with every planned feature, but adoption is near zero and the business says nothing improved. In ITIL terms, what happened?",
+      "options": [
+        { "text": "The outputs were delivered but the desired outcome was not achieved.", "correct": true, "rationale": "Features shipped are outputs. The business result that never materialized is the outcome. This is the classic output/outcome gap." },
+        { "text": "The warranty was insufficient.", "correct": false, "rationale": "Warranty is fitness for use — availability, capacity, security, continuity. Nothing here says the service performed poorly." },
+        { "text": "The service was not cost-effective.", "correct": false, "rationale": "Cost is not mentioned. The gap described is about results, not spend." },
+        { "text": "The change was unauthorized.", "correct": false, "rationale": "Authorization is not in question; the release was planned and delivered." }
+      ]
+    },
+    {
+      "id": "kc-4", "module": "concepts",
+      "stem": "What are utility and warranty?",
+      "options": [
+        { "text": "Utility is fitness for purpose; warranty is fitness for use.", "correct": true, "rationale": "Utility = what the service does (fit for purpose). Warranty = how well it performs (fit for use: availability, capacity, security, continuity). Both are needed for value." },
+        { "text": "Utility is fitness for use; warranty is fitness for purpose.", "correct": false, "rationale": "Reversed. This is the most common trap on this item." },
+        { "text": "Utility is the cost; warranty is the guarantee period.", "correct": false, "rationale": "Warranty in ITIL is not a commercial guarantee period. It is assurance the service meets agreed requirements." },
+        { "text": "Utility applies to products; warranty applies to services.", "correct": false, "rationale": "Both apply to services. They are two dimensions of the same service." }
+      ]
+    },
+    {
+      "id": "kc-5", "module": "concepts",
+      "stem": "Which statement about costs is correct in a service relationship?",
+      "options": [
+        { "text": "The service consumer only ever removes costs; the provider only ever imposes them.", "correct": false, "rationale": "Too absolute. Services both remove costs from the consumer and impose costs on them." },
+        { "text": "Services remove some costs from the consumer and impose others on the consumer.", "correct": true, "rationale": "A service removes costs the consumer would otherwise bear, but imposes costs such as fees and adoption effort. Both sides are examined." },
+        { "text": "Costs are only relevant to the service provider.", "correct": false, "rationale": "Costs and risks are considered from both provider and consumer perspectives." },
+        { "text": "Cost is the same as price.", "correct": false, "rationale": "Price is what is charged; cost is the money spent on an activity or resource." }
+      ]
+    },
+    {
+      "id": "kc-6", "module": "concepts",
+      "stem": "What is a 'service offering'?",
+      "options": [
+        { "text": "Any request submitted by a user to the service desk.", "correct": false, "rationale": "That is a service request, a different term entirely." },
+        { "text": "A formal description of one or more services designed to address the needs of a target consumer group.", "correct": true, "rationale": "A service offering may include goods, access to resources, and service actions, packaged for a specific consumer group." },
+        { "text": "The contract that defines service level targets.", "correct": false, "rationale": "That is an SLA, which is an agreement, not the offering itself." },
+        { "text": "The catalogue of all configuration items supporting a service.", "correct": false, "rationale": "That describes configuration data, managed by service configuration management." }
+      ]
+    },
+    {
+      "id": "gp-1", "module": "principles",
+      "stem": "Which is a key consideration of the guiding principle 'progress iteratively with feedback'?",
+      "options": [
+        { "text": "Work should be done as one large initiative to ensure consistency.", "correct": false, "rationale": "This is the opposite of the principle. Large single initiatives delay feedback and increase risk." },
+        { "text": "Work should be organized into smaller, manageable sections that can be executed and completed in a timely manner.", "correct": true, "rationale": "Iterations must be timeboxed and produce something usable, with feedback sought before, during, and after each one." },
+        { "text": "Feedback should be gathered only after the initiative is complete.", "correct": false, "rationale": "Feedback loops are deliberately built in throughout, not deferred to the end." },
+        { "text": "Every iteration must be fully planned before any work begins.", "correct": false, "rationale": "That reintroduces big up-front planning, which the principle exists to avoid." }
+      ]
+    },
+    {
+      "id": "gp-2", "module": "principles",
+      "stem": "You are asked to redesign the release process. Before proposing anything, you pull the current runbook, sit in on two release calls, and review the last six months of change records. Which guiding principle is this?",
+      "options": [
+        { "text": "Keep it simple and practical.", "correct": false, "rationale": "That principle is about eliminating steps that add no value, which comes later once you know what exists." },
+        { "text": "Start where you are.", "correct": true, "rationale": "Observe and measure the current state directly rather than assuming it must be scrapped. Existing practice often contains reusable value." },
+        { "text": "Focus on value.", "correct": false, "rationale": "Plausible but not specific. Every principle serves value; this scenario is specifically about assessing the current state." },
+        { "text": "Optimize and automate.", "correct": false, "rationale": "Optimization comes after understanding, and this scenario stops at understanding." }
+      ]
+    },
+    {
+      "id": "gp-3", "module": "principles",
+      "stem": "Which guiding principle warns against optimizing something in isolation because it may degrade the system as a whole?",
+      "options": [
+        { "text": "Think and work holistically.", "correct": true, "rationale": "No service stands alone. Optimizing one component in isolation commonly degrades overall outcomes." },
+        { "text": "Collaborate and promote visibility.", "correct": false, "rationale": "That principle is about who is involved and what information is surfaced, not about system-level effects." },
+        { "text": "Progress iteratively with feedback.", "correct": false, "rationale": "Concerns pacing and feedback loops, not the scope of optimization." },
+        { "text": "Focus on value.", "correct": false, "rationale": "Related but too general. The specific warning about isolated optimization belongs to holistic thinking." }
+      ]
+    },
+    {
+      "id": "gp-4", "module": "principles",
+      "stem": "What does the guiding principle 'keep it simple and practical' recommend when designing a process?",
+      "options": [
+        { "text": "Design for every possible exception up front so nothing is missed.", "correct": false, "rationale": "This is the anti-pattern the principle names explicitly. Design for the majority; handle exceptions as exceptions." },
+        { "text": "Use the minimum number of steps needed to achieve the objective, and eliminate anything that produces no value.", "correct": true, "rationale": "Outcome-based thinking. If a step contributes nothing to a valuable outcome, remove it." },
+        { "text": "Always automate before simplifying.", "correct": false, "rationale": "Automating a wasteful process just makes waste faster. Simplify first." },
+        { "text": "Keep all existing controls regardless of value, for audit safety.", "correct": false, "rationale": "Controls must justify themselves like any other step, though genuine compliance requirements are kept." }
+      ]
+    },
+    {
+      "id": "gp-5", "module": "principles",
+      "stem": "Which pair of statements best reflects 'optimize and automate'?",
+      "options": [
+        { "text": "Automate first to expose inefficiency, then optimize what remains.", "correct": false, "rationale": "Reversed. Automating an unoptimized process entrenches the inefficiency." },
+        { "text": "Optimize the process first, then automate where automation adds value.", "correct": true, "rationale": "The principle is deliberately ordered: simplify and optimize before introducing automation." },
+        { "text": "Automate everything that can technically be automated.", "correct": false, "rationale": "Automation is applied where it adds value, not universally." },
+        { "text": "Avoid automation in regulated environments.", "correct": false, "rationale": "No such blanket rule. Regulated environments automate heavily, with appropriate controls." }
+      ]
+    },
+    {
+      "id": "gp-6", "module": "principles",
+      "stem": "A release manager publishes the deployment tracker so every scrum team, DevOps, and the hosting group can see status and blockers in real time during the release window. Which guiding principle is most directly demonstrated?",
+      "options": [
+        { "text": "Collaborate and promote visibility.", "correct": true, "rationale": "Work made visible reduces hidden agendas and enables the right people to act. Poor visibility drives poor decisions." },
+        { "text": "Start where you are.", "correct": false, "rationale": "Nothing here is about assessing an existing state." },
+        { "text": "Focus on value.", "correct": false, "rationale": "True of everything, but the specific behavior described is visibility and collaboration." },
+        { "text": "Think and work holistically.", "correct": false, "rationale": "Close, since multiple groups are involved, but the defining act here is making work visible." }
+      ]
+    },
+    {
+      "id": "fd-1", "module": "dimensions",
+      "stem": "Which are the four dimensions of service management?",
+      "options": [
+        { "text": "People, process, technology, and cost.", "correct": false, "rationale": "This is the older 'people process technology' triad plus cost — not the ITIL 4 four dimensions." },
+        { "text": "Organizations and people; information and technology; partners and suppliers; value streams and processes.", "correct": true, "rationale": "These four must all be considered for a service to be effective, and all four are affected by external PESTLE factors." },
+        { "text": "Plan, build, run, and improve.", "correct": false, "rationale": "These resemble value chain activities, not dimensions." },
+        { "text": "Utility, warranty, cost, and risk.", "correct": false, "rationale": "These are service value concepts, not dimensions." }
+      ]
+    },
+    {
+      "id": "fd-2", "module": "dimensions",
+      "stem": "An organization outsources its overnight deployment execution to a managed service partner. Which dimension is most directly engaged?",
+      "options": [
+        { "text": "Organizations and people.", "correct": false, "rationale": "Relevant to internal structure and culture, but the defining feature here is an external party." },
+        { "text": "Partners and suppliers.", "correct": true, "rationale": "This dimension covers the organization's relationships with other organizations involved in design, deployment, delivery, and support." },
+        { "text": "Value streams and processes.", "correct": false, "rationale": "Concerns how activities are organized to create value, not who is contracted." },
+        { "text": "Information and technology.", "correct": false, "rationale": "Concerns the information and tech supporting the service." }
+      ]
+    },
+    {
+      "id": "svs-1", "module": "svs",
+      "stem": "What is the purpose of the ITIL service value system?",
+      "options": [
+        { "text": "To describe how all the components and activities of the organization work together to create value.", "correct": true, "rationale": "The SVS is the whole model: guiding principles, governance, service value chain, practices, and continual improvement." },
+        { "text": "To define the contractual relationship between provider and consumer.", "correct": false, "rationale": "That is closer to service level management and service agreements." },
+        { "text": "To provide a maturity model for benchmarking IT organizations.", "correct": false, "rationale": "The SVS is not a maturity model." },
+        { "text": "To list the 34 management practices in priority order.", "correct": false, "rationale": "Practices are one component of the SVS; the SVS does not rank them." }
+      ]
+    },
+    {
+      "id": "vc-1", "module": "valuechain",
+      "stem": "Which are the six activities of the service value chain?",
+      "options": [
+        { "text": "Plan, improve, engage, design and transition, obtain/build, deliver and support.", "correct": true, "rationale": "These six interconnect in many combinations to form value streams. Order is not fixed." },
+        { "text": "Strategy, design, transition, operation, improvement, governance.", "correct": false, "rationale": "That is close to the ITIL v3 service lifecycle, which ITIL 4 replaced." },
+        { "text": "Plan, do, check, act, review, improve.", "correct": false, "rationale": "PDCA is a different improvement cycle, not the value chain." },
+        { "text": "Intake, triage, build, test, release, support.", "correct": false, "rationale": "A plausible delivery pipeline, but not the ITIL value chain activities." }
+      ]
+    },
+    {
+      "id": "vc-2", "module": "valuechain",
+      "stem": "Which value chain activity is responsible for ensuring a shared understanding of the vision, current status, and improvement direction for all four dimensions?",
+      "options": [
+        { "text": "Improve.", "correct": false, "rationale": "Improve ensures continual improvement of products, services, and practices — not the shared vision itself." },
+        { "text": "Plan.", "correct": true, "rationale": "This is the stated purpose of the plan activity, across all four dimensions and all products and services." },
+        { "text": "Engage.", "correct": false, "rationale": "Engage provides understanding of stakeholder needs and maintains relationships." },
+        { "text": "Design and transition.", "correct": false, "rationale": "Ensures products and services meet expectations for quality, cost, and time to market." }
+      ]
+    },
+    {
+      "id": "p15-1", "module": "practices15",
+      "stem": "What is the purpose of the 'release management' practice?",
+      "options": [
+        { "text": "To move new or changed hardware, software, or documentation into live environments.", "correct": false, "rationale": "That is deployment management. ITIL 4 deliberately separates the two, and the exam tests the separation." },
+        { "text": "To make new and changed services and features available for use.", "correct": true, "rationale": "Release management is about availability for use. A component can be deployed without being released, and vice versa." },
+        { "text": "To maximize the number of successful IT changes.", "correct": false, "rationale": "That is change enablement." },
+        { "text": "To ensure accurate configuration information is available.", "correct": false, "rationale": "That is service configuration management." }
+      ]
+    },
+    {
+      "id": "p15-2", "module": "practices15",
+      "stem": "A feature is pushed to production behind a feature flag that is still switched off. In ITIL 4 terms, what has occurred?",
+      "options": [
+        { "text": "It has been deployed but not released.", "correct": true, "rationale": "Deployment moves the component into the live environment; release makes it available for use. Feature flags are the clearest real example of the split." },
+        { "text": "It has been released but not deployed.", "correct": false, "rationale": "Reversed. The code is physically in production, so deployment happened." },
+        { "text": "Both deployment and release are complete.", "correct": false, "rationale": "Users cannot use it, so it is not yet released." },
+        { "text": "Neither has occurred until the CAB approves.", "correct": false, "rationale": "CAB authorization belongs to change enablement and does not define deployment or release." }
+      ]
+    },
+    {
+      "id": "p15-3", "module": "practices15",
+      "stem": "What is the purpose of the 'deployment management' practice?",
+      "options": [
+        { "text": "To make new and changed features available for use.", "correct": false, "rationale": "That is release management." },
+        { "text": "To move new or changed hardware, software, documentation, or processes to live environments.", "correct": true, "rationale": "Deployment is the physical movement into an environment, whether or not users can yet use it." },
+        { "text": "To protect the information needed by the organization.", "correct": false, "rationale": "That is information security management." },
+        { "text": "To plan and manage the full lifecycle of IT assets.", "correct": false, "rationale": "That is IT asset management." }
+      ]
+    },
+    {
+      "id": "p15-4", "module": "practices15",
+      "stem": "What is the purpose of the 'service configuration management' practice?",
+      "options": [
+        { "text": "To ensure accurate and reliable information about the configuration of services, and the CIs that support them, is available when and where needed.", "correct": true, "rationale": "Configuration management maintains information about CIs and their relationships." },
+        { "text": "To track the financial value of all IT assets.", "correct": false, "rationale": "That leans toward IT asset management." },
+        { "text": "To authorize changes to production.", "correct": false, "rationale": "That is change enablement." },
+        { "text": "To detect and escalate service events.", "correct": false, "rationale": "That is monitoring and event management." }
+      ]
+    },
+    {
+      "id": "p15-5", "module": "practices15",
+      "stem": "What is the purpose of 'monitoring and event management'?",
+      "options": [
+        { "text": "To restore normal service operation as quickly as possible.", "correct": false, "rationale": "That is incident management." },
+        { "text": "To systematically observe services and components, and record and report selected changes of state identified as events.", "correct": true, "rationale": "It observes and identifies events, determining their significance and the appropriate response." },
+        { "text": "To reduce the likelihood and impact of incidents by identifying causes.", "correct": false, "rationale": "That is problem management." },
+        { "text": "To set clear business-based targets for service performance.", "correct": false, "rationale": "That is service level management." }
+      ]
+    },
+    {
+      "id": "p15-6", "module": "practices15",
+      "stem": "What is the purpose of the 'information security management' practice?",
+      "options": [
+        { "text": "To protect the information needed by the organization to conduct its business.", "correct": true, "rationale": "It covers confidentiality, integrity, and availability, along with authentication and non-repudiation." },
+        { "text": "To ensure suppliers meet contractual security obligations.", "correct": false, "rationale": "That falls under supplier management, though security is a concern there too." },
+        { "text": "To encrypt all data at rest and in transit.", "correct": false, "rationale": "A control, not the purpose of the practice." },
+        { "text": "To manage user access requests.", "correct": false, "rationale": "Access requests are typically handled via service request management." }
+      ]
+    },
+    {
+      "id": "p7-ce-1", "module": "practices7",
+      "stem": "What is the purpose of the 'change enablement' practice?",
+      "options": [
+        { "text": "To ensure every change is approved by a change advisory board.", "correct": false, "rationale": "The CAB is one authorization mechanism, not the purpose, and standard changes bypass it entirely." },
+        { "text": "To maximize the number of successful service and product changes by ensuring risks are properly assessed, authorizing changes to proceed, and managing the change schedule.", "correct": true, "rationale": "This is the official AXELOS wording. Note the emphasis on maximizing successful changes, not minimizing changes." },
+        { "text": "To restore normal service operation as quickly as possible.", "correct": false, "rationale": "That is incident management." },
+        { "text": "To make new features available for use.", "correct": false, "rationale": "That is release management." }
+      ]
+    },
+    {
+      "id": "p7-ce-2", "module": "practices7",
+      "stem": "Which is the correct description of a 'standard change'?",
+      "options": [
+        { "text": "A change that must be assessed and authorized by the CAB before proceeding.", "correct": false, "rationale": "That describes a normal change." },
+        { "text": "A low-risk, pre-authorized change that is well understood and fully documented, and can be implemented without additional authorization.", "correct": true, "rationale": "Standard changes are authorized once as a procedure. The risk assessment happened when the procedure was created." },
+        { "text": "A change that must be implemented immediately to restore service.", "correct": false, "rationale": "That is an emergency change." },
+        { "text": "Any change implemented during a scheduled maintenance window.", "correct": false, "rationale": "Timing does not determine change type." }
+      ]
+    },
+    {
+      "id": "p7-ce-3", "module": "practices7",
+      "stem": "A production outage requires an immediate fix outside the normal release window. Authorization is expedited and documentation is completed afterward. What type of change is this?",
+      "options": [
+        { "text": "Standard change.", "correct": false, "rationale": "Standard changes are pre-authorized and low risk. Nothing about an emergency fix is pre-authorized." },
+        { "text": "Normal change.", "correct": false, "rationale": "Normal changes follow the full scheduling and assessment path, which is exactly what is being bypassed." },
+        { "text": "Emergency change.", "correct": true, "rationale": "Emergency changes are expedited, often with a separate authority such as an ECAB, and documentation may follow implementation." },
+        { "text": "Unauthorized change.", "correct": false, "rationale": "It was authorized, just through an expedited path." }
+      ]
+    },
+    {
+      "id": "p7-ce-4", "module": "practices7",
+      "stem": "Who should be the change authority for a standard change?",
+      "options": [
+        { "text": "The CAB, at its next scheduled meeting.", "correct": false, "rationale": "Routing standard changes through the CAB defeats their purpose and creates a bottleneck." },
+        { "text": "Authorization is granted in advance when the standard change procedure is created; no per-instance authority is needed.", "correct": true, "rationale": "The change model itself carries the authorization. This is why standard changes are fast." },
+        { "text": "The service owner, for each instance.", "correct": false, "rationale": "Per-instance authorization would make it a normal change." },
+        { "text": "The incident manager.", "correct": false, "rationale": "Incident management does not authorize changes." }
+      ]
+    },
+    {
+      "id": "p7-im-1", "module": "practices7",
+      "stem": "What is the purpose of the 'incident management' practice?",
+      "options": [
+        { "text": "To minimize the negative impact of incidents by restoring normal service operation as quickly as possible.", "correct": true, "rationale": "Speed of restoration is the objective. Root cause is explicitly not the goal here." },
+        { "text": "To identify and eliminate the underlying causes of incidents.", "correct": false, "rationale": "That is problem management. Confusing these two is the single most common Foundation error." },
+        { "text": "To authorize the changes needed to resolve incidents.", "correct": false, "rationale": "Change enablement authorizes; incident management may raise a change." },
+        { "text": "To record all user requests for service.", "correct": false, "rationale": "That is service request management." }
+      ]
+    },
+    {
+      "id": "p7-pm-1", "module": "practices7",
+      "stem": "What is the difference between a problem and a known error?",
+      "options": [
+        { "text": "A problem is caused by users; a known error is caused by systems.", "correct": false, "rationale": "Cause origin does not distinguish them." },
+        { "text": "A problem is a cause, or potential cause, of one or more incidents; a known error is a problem that has been analysed but not resolved.", "correct": true, "rationale": "The known error state begins after analysis is complete, typically once a workaround exists." },
+        { "text": "A known error is a problem that has been resolved.", "correct": false, "rationale": "A resolved problem is closed. Known errors are analysed but still unresolved." },
+        { "text": "They are the same thing at different severity levels.", "correct": false, "rationale": "They are distinct states in the problem management lifecycle." }
+      ]
+    },
+    {
+      "id": "p7-pm-2", "module": "practices7",
+      "stem": "What are the three phases of problem management?",
+      "options": [
+        { "text": "Detection, diagnosis, recovery.", "correct": false, "rationale": "These resemble incident handling steps." },
+        { "text": "Problem identification, problem control, error control.", "correct": true, "rationale": "Identification finds problems; problem control analyses them; error control manages known errors and potential permanent solutions." },
+        { "text": "Logging, categorization, closure.", "correct": false, "rationale": "Generic record handling, not the defined phases." },
+        { "text": "Prevention, detection, correction.", "correct": false, "rationale": "A control taxonomy, not the ITIL phases." }
+      ]
+    },
+    {
+      "id": "p7-pm-3", "module": "practices7",
+      "stem": "A workaround is documented for a recurring failure but the underlying defect will not be fixed until a vendor patch ships next quarter. What is the correct state?",
+      "options": [
+        { "text": "The incident remains open until the patch ships.", "correct": false, "rationale": "Incidents are closed once service is restored, even via a workaround." },
+        { "text": "A known error exists, managed under error control.", "correct": true, "rationale": "Analysed, workaround documented, not permanently resolved — that is exactly the known error state." },
+        { "text": "The problem is closed because a workaround exists.", "correct": false, "rationale": "A workaround does not resolve the problem; it reduces impact." },
+        { "text": "An emergency change must be raised immediately.", "correct": false, "rationale": "Nothing here indicates an emergency." }
+      ]
+    },
+    {
+      "id": "p7-sr-1", "module": "practices7",
+      "stem": "Which of these is a service request?",
+      "options": [
+        { "text": "A user reports that the payment page returns an error.", "correct": false, "rationale": "That is an unplanned interruption to service — an incident." },
+        { "text": "A user asks for access to a shared reporting dashboard.", "correct": true, "rationale": "A request for a normal, pre-defined, pre-authorized part of service delivery." },
+        { "text": "Monitoring detects that CPU utilization crossed a threshold.", "correct": false, "rationale": "That is an event." },
+        { "text": "A recurring outage is traced to a memory leak.", "correct": false, "rationale": "That is a problem." }
+      ]
+    },
+    {
+      "id": "p7-sr-2", "module": "practices7",
+      "stem": "Which statement about service request management is correct?",
+      "options": [
+        { "text": "Service requests should be handled by a procedure that is standardized and automated wherever possible.", "correct": true, "rationale": "Requests are pre-defined and pre-agreed, which makes them well suited to standardization and automation." },
+        { "text": "Every service request requires a normal change to be raised.", "correct": false, "rationale": "Requests are pre-authorized. Raising a normal change for each would defeat the practice." },
+        { "text": "Service requests are unplanned interruptions to a service.", "correct": false, "rationale": "That defines an incident." },
+        { "text": "Service requests are always fulfilled by the service desk directly.", "correct": false, "rationale": "Fulfilment may involve many teams; the desk is often the entry point, not the fulfiller." }
+      ]
+    },
+    {
+      "id": "p7-sd-1", "module": "practices7",
+      "stem": "What is the purpose of the 'service desk' practice?",
+      "options": [
+        { "text": "To capture demand for incident resolution and service requests, and act as the single point of contact for users.", "correct": true, "rationale": "The service desk is the entry point and single point of contact between the provider and all its users." },
+        { "text": "To resolve all incidents without escalation.", "correct": false, "rationale": "Escalation is normal and expected; the desk is not required to resolve everything." },
+        { "text": "To manage the change schedule.", "correct": false, "rationale": "That is change enablement." },
+        { "text": "To negotiate service level agreements.", "correct": false, "rationale": "That is service level management." }
+      ]
+    },
+    {
+      "id": "p7-slm-1", "module": "practices7",
+      "stem": "What is the purpose of 'service level management'?",
+      "options": [
+        { "text": "To set clear business-based targets for service performance, so that delivery can be properly assessed, monitored, and managed against these targets.", "correct": true, "rationale": "The emphasis on business-based targets is deliberate and frequently tested." },
+        { "text": "To ensure services are available 100% of the time.", "correct": false, "rationale": "No practice targets 100% availability; targets are agreed and business-based." },
+        { "text": "To monitor infrastructure components for threshold breaches.", "correct": false, "rationale": "That is monitoring and event management." },
+        { "text": "To manage relationships with suppliers.", "correct": false, "rationale": "That is supplier management." }
+      ]
+    },
+    {
+      "id": "p7-slm-2", "module": "practices7",
+      "stem": "Which is the biggest weakness of relying on individual technical metrics for service level agreements?",
+      "options": [
+        { "text": "They are expensive to collect.", "correct": false, "rationale": "Cost is not the concern the syllabus raises." },
+        { "text": "They may all be green while the user experience is poor — the 'watermelon effect'.", "correct": true, "rationale": "Green on the outside, red on the inside. SLAs must relate to defined outcomes, not just component metrics." },
+        { "text": "They cannot be automated.", "correct": false, "rationale": "Technical metrics are the easiest to automate; that is part of the temptation." },
+        { "text": "They are not accepted by auditors.", "correct": false, "rationale": "Not a syllabus point." }
+      ]
+    },
+    {
+      "id": "p7-ci-1", "module": "practices7",
+      "stem": "What are the steps of the continual improvement model, in order?",
+      "options": [
+        { "text": "Plan, do, check, act, repeat.", "correct": false, "rationale": "PDCA is a different cycle and is not the ITIL continual improvement model." },
+        { "text": "What is the vision? Where are we now? Where do we want to be? How do we get there? Take action. Did we get there? How do we keep the momentum going?", "correct": true, "rationale": "Seven steps. The exam tests both the sequence and the fact that it ends with sustaining momentum." },
+        { "text": "Identify, assess, authorize, implement, review.", "correct": false, "rationale": "That resembles a change lifecycle." },
+        { "text": "Measure, analyse, improve, control.", "correct": false, "rationale": "That is closer to Six Sigma's DMAIC." }
+      ]
+    },
+    {
+      "id": "p7-ci-2", "module": "practices7",
+      "stem": "Who is responsible for continual improvement in ITIL 4?",
+      "options": [
+        { "text": "The continual improvement manager alone.", "correct": false, "rationale": "A dedicated role may exist, but responsibility is not confined to it." },
+        { "text": "Everyone in the organization.", "correct": true, "rationale": "Continual improvement is everyone's responsibility, and leadership must actively demonstrate commitment to it." },
+        { "text": "Only senior leadership.", "correct": false, "rationale": "Leadership commitment is required, but responsibility is organization-wide." },
+        { "text": "The service desk, as the single point of contact.", "correct": false, "rationale": "The desk contributes but does not own improvement." }
+      ]
+    },
+    {
+      "id": "p7-ci-3", "module": "practices7",
+      "stem": "Which step of the continual improvement model is most often skipped, and what is the consequence?",
+      "options": [
+        { "text": "'Where are we now?' — without a baseline, you cannot demonstrate whether improvement occurred.", "correct": true, "rationale": "Baseline measurement is the step organizations skip most, and skipping it makes the final 'Did we get there?' step unanswerable." },
+        { "text": "'What is the vision?' — without it, no work can start.", "correct": false, "rationale": "Commonly rushed, but the syllabus emphasis on measurement is on the baseline." },
+        { "text": "'Take action' — most organizations plan but never execute.", "correct": false, "rationale": "A real organizational failure, but not the step the model highlights for measurement." },
+        { "text": "'How do we keep the momentum going?' — improvements decay.", "correct": false, "rationale": "Genuinely important, but the baseline gap is what breaks measurability." }
+      ]
+    },
+    {
+      "id": "p7-mix-1", "module": "practices7",
+      "stem": "Monitoring detects a database node has failed over. Users report no impact. Service continues normally. What has occurred?",
+      "options": [
+        { "text": "An incident, because a component failed.", "correct": false, "rationale": "An incident is an unplanned interruption or reduction in quality of a service. Service was unaffected." },
+        { "text": "An event, which may be informational or a warning.", "correct": true, "rationale": "An event is any change of state significant to the management of a service. Not all events are incidents." },
+        { "text": "A problem, because the failover has an underlying cause.", "correct": false, "rationale": "A problem may later be raised, but the observation itself is an event." },
+        { "text": "A service request.", "correct": false, "rationale": "No user requested anything." }
+      ]
+    },
+    {
+      "id": "p7-mix-2", "module": "practices7",
+      "stem": "During a major incident, which is the correct relationship between incident and problem management?",
+      "options": [
+        { "text": "Problem management must complete root cause analysis before the incident can be closed.", "correct": false, "rationale": "This would delay restoration indefinitely. Incidents close on restoration." },
+        { "text": "Incident management restores service; problem management separately investigates the cause, often after restoration.", "correct": true, "rationale": "The practices are deliberately decoupled so that restoration is never held hostage to analysis." },
+        { "text": "Major incidents are handled entirely by problem management.", "correct": false, "rationale": "Major incidents are still incidents, handled with a separate procedure and shorter timescales." },
+        { "text": "Incident and problem management are the same practice under different names.", "correct": false, "rationale": "They are distinct practices with different purposes." }
+      ]
+    },
+    {
+      "id": "p7-mix-3", "module": "practices7",
+      "stem": "You are asked to reduce release window duration. Applying ITIL thinking, what is the correct first move?",
+      "options": [
+        { "text": "Automate the deployment pipeline immediately to remove manual steps.", "correct": false, "rationale": "Automating before optimizing entrenches existing waste. The principle is ordered: optimize, then automate." },
+        { "text": "Establish the current baseline duration and identify which steps produce no value.", "correct": true, "rationale": "'Start where you are' plus 'keep it simple and practical'. Without a baseline you cannot prove improvement." },
+        { "text": "Reduce the number of changes permitted per window.", "correct": false, "rationale": "Change enablement aims to maximize successful changes, not restrict throughput." },
+        { "text": "Move all changes to standard change status to skip the CAB.", "correct": false, "rationale": "Misuse of the standard change model. Pre-authorization requires genuine low risk and documented procedure." }
+      ]
+    },
+
+    {
+      "id": "kc-7", "module": "concepts",
+      "stem": "What is the ITIL 4 definition of 'service management'?",
+      "options": [
+        { "text": "A set of specialized organizational capabilities for enabling value to customers in the form of services.", "correct": true, "rationale": "This is the exact definition. The key phrase is 'specialized organizational capabilities' — it is about what the organization can do, not a framework or a department." },
+        { "text": "A framework for delivering IT projects on time and under budget.", "correct": false, "rationale": "ITIL is not a project management framework and service management is not about projects." },
+        { "text": "The process of managing IT infrastructure and applications.", "correct": false, "rationale": "Too narrow. Service management is about enabling value through services, not managing infrastructure." },
+        { "text": "The management of all IT staff and their performance.", "correct": false, "rationale": "That is people management. Service management is an organizational capability." }
+      ]
+    },
+    {
+      "id": "kc-8", "module": "concepts",
+      "stem": "Which role describes a person who uses services?",
+      "options": [
+        { "text": "Customer.", "correct": false, "rationale": "A customer defines the requirements for a service and takes responsibility for the outcomes of service consumption." },
+        { "text": "Sponsor.", "correct": false, "rationale": "A sponsor authorizes the budget for service consumption. They may never personally use the service." },
+        { "text": "User.", "correct": true, "rationale": "A user is a person who uses services. Simple definition, but the exam tests it as part of the customer/user/sponsor trio." },
+        { "text": "Stakeholder.", "correct": false, "rationale": "Stakeholder is a broader term covering anyone with an interest. User is the specific role for the person who uses the service." }
+      ]
+    },
+    {
+      "id": "kc-9", "module": "concepts",
+      "stem": "How does ITIL 4 define an 'organization'?",
+      "options": [
+        { "text": "A company that provides IT services to external customers.", "correct": false, "rationale": "Too narrow. An organization can be internal, external, a department, or even a single person." },
+        { "text": "A person or a group of people that has its own functions with responsibilities, authorities, and relationships to achieve its objectives.", "correct": true, "rationale": "This is the official definition. Note that a single person can be an organization under this definition." },
+        { "text": "A department within a larger enterprise that manages technology.", "correct": false, "rationale": "An IT department is one type of organization, but the definition is much broader." },
+        { "text": "Any group of two or more people working toward a common goal.", "correct": false, "rationale": "Close but wrong — the definition includes a single person and specifies functions, responsibilities, authorities, and relationships." }
+      ]
+    },
+    {
+      "id": "kc-10", "module": "concepts",
+      "stem": "What is the ITIL 4 definition of 'risk'?",
+      "options": [
+        { "text": "A known defect in a service that has not yet been resolved.", "correct": false, "rationale": "That describes a known error, which is a problem management concept." },
+        { "text": "The cost of implementing a change that may not succeed.", "correct": false, "rationale": "Cost and risk are related but not the same. Risk is about possible events, not costs." },
+        { "text": "A possible event that could cause harm or loss, or make it more difficult to achieve objectives.", "correct": true, "rationale": "Risk can also apply to positive outcomes — an opportunity is a type of risk. But the core definition centres on possible events and their impact on objectives." },
+        { "text": "An incident that has occurred but has not yet been reported.", "correct": false, "rationale": "An unreported incident is not a risk. Risk is about possible future events." }
+      ]
+    },
+    {
+      "id": "kc-11", "module": "concepts",
+      "stem": "Which statement BEST describes a 'service' according to ITIL 4?",
+      "options": [
+        { "text": "A way of delivering value to customers by selling access to IT resources.", "correct": false, "rationale": "Services are not defined by selling or by IT. The definition is about enabling value co-creation." },
+        { "text": "A means of enabling value co-creation by facilitating outcomes that customers want to achieve, without the customer having to manage specific costs and risks.", "correct": true, "rationale": "The full definition. The clause 'without the customer having to manage specific costs and risks' is frequently tested — the provider absorbs those on the consumer's behalf." },
+        { "text": "Any IT system that is available to users during agreed business hours.", "correct": false, "rationale": "Availability is one aspect of warranty, not the definition of a service." },
+        { "text": "A set of activities performed by an IT department to support business operations.", "correct": false, "rationale": "Too narrow and operational. A service is about outcomes and value, not about activities." }
+      ]
+    },
+    {
+      "id": "kc-12", "module": "concepts",
+      "stem": "In ITIL 4, which role defines the requirements for a service and takes responsibility for the outcomes of service consumption?",
+      "options": [
+        { "text": "User.", "correct": false, "rationale": "A user uses the service but does not define its requirements." },
+        { "text": "Customer.", "correct": true, "rationale": "The customer defines requirements and is accountable for outcomes. They may or may not also be the user or sponsor." },
+        { "text": "Sponsor.", "correct": false, "rationale": "The sponsor authorizes budget, not requirements." },
+        { "text": "Service owner.", "correct": false, "rationale": "The service owner is on the provider side. Customer, user, and sponsor are consumer-side roles." }
+      ]
+    },
+    {
+      "id": "kc-13", "module": "concepts",
+      "stem": "Which role authorizes budget for service consumption?",
+      "options": [
+        { "text": "Customer.", "correct": false, "rationale": "The customer defines requirements but does not necessarily control the budget." },
+        { "text": "User.", "correct": false, "rationale": "The user uses services. Budget authorization is the sponsor's role." },
+        { "text": "Sponsor.", "correct": true, "rationale": "The sponsor authorizes the budget for service consumption. In many organizations this is a finance or executive function separate from the customer who defines requirements." },
+        { "text": "Service desk agent.", "correct": false, "rationale": "The service desk captures demand and acts as a contact point. It does not authorize budgets." }
+      ]
+    },
+    {
+      "id": "kc-14", "module": "concepts",
+      "stem": "Which statement correctly describes 'service provision'?",
+      "options": [
+        { "text": "Activities performed by an organization to provide services, including managing provider resources, ensuring access to resources, fulfilling service actions, and performing service level management.", "correct": true, "rationale": "Service provision is the provider-side set of activities. Service consumption is the consumer-side counterpart." },
+        { "text": "The act of a consumer using the service they have purchased.", "correct": false, "rationale": "That describes service consumption, not service provision." },
+        { "text": "The joint activities between provider and consumer to maintain value.", "correct": false, "rationale": "That describes service relationship management, which connects provision and consumption." },
+        { "text": "The same thing as service consumption, viewed from the provider's perspective.", "correct": false, "rationale": "They are distinct concepts, not perspectives on the same thing." }
+      ]
+    },
+    {
+      "id": "kc-15", "module": "concepts",
+      "stem": "What is 'service relationship management'?",
+      "options": [
+        { "text": "The process of negotiating SLAs between provider and consumer.", "correct": false, "rationale": "SLA negotiation is part of service level management, a specific practice." },
+        { "text": "Joint activities performed by a service provider and a service consumer to ensure continual value co-creation based on agreed and available service offerings.", "correct": true, "rationale": "Service relationship management sits between provision and consumption. It is the cooperative mechanism that keeps value flowing." },
+        { "text": "A practice for managing contracts with external suppliers.", "correct": false, "rationale": "That describes supplier management." },
+        { "text": "A role responsible for maintaining customer satisfaction scores.", "correct": false, "rationale": "It is a set of activities, not a role." }
+      ]
+    },
+
+    {
+      "id": "gp-7", "module": "principles",
+      "stem": "Which statement about the ITIL guiding principles is correct?",
+      "options": [
+        { "text": "They are mandatory rules that every organization must follow exactly as written.", "correct": false, "rationale": "They are recommendations, not rules. Organizations adapt how they apply them." },
+        { "text": "They are recommendations that guide an organization in all circumstances, regardless of changes in its goals, strategies, type of work, or management structure.", "correct": true, "rationale": "Guiding principles are recommendations. They apply universally and should never be discarded." },
+        { "text": "They should be reviewed and updated annually to match current industry trends.", "correct": false, "rationale": "They are enduring principles, not trend-dependent policies. They should never be changed." },
+        { "text": "They apply only to IT service management, not to other business functions.", "correct": false, "rationale": "They are universal recommendations applicable to any organizational endeavour." }
+      ]
+    },
+    {
+      "id": "gp-8", "module": "principles",
+      "stem": "The guiding principle 'optimize and automate' describes a sequence. What is the correct order?",
+      "options": [
+        { "text": "Automate repetitive tasks, then optimize the remaining manual steps.", "correct": false, "rationale": "Reversed. Automating before optimizing locks in existing inefficiency." },
+        { "text": "Understand and agree on the context, then simplify and optimize, then automate.", "correct": true, "rationale": "Three steps: (1) understand what can be improved, (2) eliminate waste and simplify, (3) automate what remains." },
+        { "text": "Automate everything technically possible, then optimize for cost.", "correct": false, "rationale": "The principle warns against automating everything. Automate only where it adds value." },
+        { "text": "Optimize for the majority of cases, skip automation entirely.", "correct": false, "rationale": "Automation is valuable when applied after optimization, not skipped." }
+      ]
+    },
+    {
+      "id": "gp-9", "module": "principles",
+      "stem": "A team uses a large visible task board in their workspace to show what each person is working on, what is blocked, and what is done. In Agile terminology, this is called an information radiator. Which guiding principle does it demonstrate?",
+      "options": [
+        { "text": "Focus on value.", "correct": false, "rationale": "Too general. Every principle serves value. The specific behaviour is making work visible." },
+        { "text": "Collaborate and promote visibility.", "correct": true, "rationale": "An information radiator makes the state of work visible to everyone without them having to ask. This is the textbook example of the principle." },
+        { "text": "Keep it simple and practical.", "correct": false, "rationale": "The board may be simple, but the defining act is visibility, not simplicity." },
+        { "text": "Think and work holistically.", "correct": false, "rationale": "The board shows the whole picture, but the principle demonstrated is visibility." }
+      ]
+    },
+    {
+      "id": "neg-gp-1", "module": "principles",
+      "stem": "Which of the following is NOT one of the seven ITIL guiding principles?",
+      "options": [
+        { "text": "Focus on value.", "correct": false, "rationale": "Focus on value is one of the seven guiding principles." },
+        { "text": "Start where you are.", "correct": false, "rationale": "Start where you are is one of the seven guiding principles." },
+        { "text": "Ensure compliance.", "correct": true, "rationale": "'Ensure compliance' is NOT a guiding principle. The seven are: focus on value, start where you are, progress iteratively with feedback, collaborate and promote visibility, think and work holistically, keep it simple and practical, optimize and automate." },
+        { "text": "Collaborate and promote visibility.", "correct": false, "rationale": "Collaborate and promote visibility is one of the seven guiding principles." }
+      ]
+    },
+
+    {
+      "id": "svs-2", "module": "svs",
+      "stem": "Which of the following is NOT a component of the ITIL service value system?",
+      "options": [
+        { "text": "Guiding principles.", "correct": false, "rationale": "Guiding principles are one of the five SVS components." },
+        { "text": "Service value chain.", "correct": false, "rationale": "The service value chain is one of the five SVS components." },
+        { "text": "Deliver and support.", "correct": true, "rationale": "'Deliver and support' is a value chain ACTIVITY, not an SVS component. The five SVS components are: guiding principles, governance, service value chain, practices, and continual improvement." },
+        { "text": "Governance.", "correct": false, "rationale": "Governance is one of the five SVS components." }
+      ]
+    },
+
+    {
+      "id": "vc-3", "module": "valuechain",
+      "stem": "Which of the following is NOT a service value chain activity?",
+      "options": [
+        { "text": "Engage.", "correct": false, "rationale": "Engage is one of the six value chain activities." },
+        { "text": "Design and transition.", "correct": false, "rationale": "Design and transition is one of the six value chain activities." },
+        { "text": "Governance.", "correct": true, "rationale": "Governance is a component of the SVS, not a value chain activity. The six activities are: plan, improve, engage, design and transition, obtain/build, deliver and support." },
+        { "text": "Obtain/build.", "correct": false, "rationale": "Obtain/build is one of the six value chain activities." }
+      ]
+    },
+    {
+      "id": "vc-4", "module": "valuechain",
+      "stem": "Which statement about value chain activities is correct?",
+      "options": [
+        { "text": "They must be performed in a fixed sequence from plan through to deliver and support.", "correct": false, "rationale": "There is no fixed sequence. Activities interconnect in many combinations to form value streams." },
+        { "text": "Each activity receives and provides triggers for further actions by other value chain activities.", "correct": true, "rationale": "Activities are interconnected. Each receives inputs from and provides outputs and triggers to others, forming value streams." },
+        { "text": "Each activity is performed by a single dedicated team.", "correct": false, "rationale": "Multiple teams may contribute to a single activity, and one team may contribute to several." },
+        { "text": "Once an activity is completed for a given service, it is not repeated.", "correct": false, "rationale": "Activities are performed continuously and repeatedly throughout the service lifecycle." }
+      ]
+    },
+
+    {
+      "id": "vcm-slm-1", "module": "practices7",
+      "stem": "How does service level management contribute to the 'plan' value chain activity?",
+      "options": [
+        { "text": "It provides information about actual service performance and trends.", "correct": true, "rationale": "SLM feeds the plan activity with real performance data and trend information, informing planning decisions." },
+        { "text": "It collects and processes feedback from customers and users.", "correct": false, "rationale": "That is how SLM contributes to the 'engage' activity." },
+        { "text": "It provides objectives for component and service performance.", "correct": false, "rationale": "That is how SLM contributes to 'obtain/build'." },
+        { "text": "It initiates standard changes to fulfill requests.", "correct": false, "rationale": "That describes service request management's contribution to design and transition." }
+      ]
+    },
+    {
+      "id": "vcm-slm-2", "module": "practices7",
+      "stem": "How does service level management contribute to the 'engage' value chain activity?",
+      "options": [
+        { "text": "It defines the deployment model for service components.", "correct": false, "rationale": "Deployment models are the domain of deployment management." },
+        { "text": "It collects and processes feedback from customers and users.", "correct": true, "rationale": "SLM engages with customers and users to understand their needs and gather feedback on service performance." },
+        { "text": "It communicates performance objectives to operations teams.", "correct": false, "rationale": "That is how SLM contributes to 'deliver and support'." },
+        { "text": "It provides information about actual service performance and trends.", "correct": false, "rationale": "That is how SLM contributes to 'plan'." }
+      ]
+    },
+    {
+      "id": "vcm-slm-3", "module": "practices7",
+      "stem": "How does service level management contribute to the 'design and transition' value chain activity?",
+      "options": [
+        { "text": "It provides feedback from interactions with customers into new or changed services.", "correct": true, "rationale": "SLM channels customer interaction feedback into the design of new or changed services, ensuring designs reflect real needs." },
+        { "text": "It acquires pre-approved service components.", "correct": false, "rationale": "Acquiring components is how service request management contributes to obtain/build." },
+        { "text": "It collects feedback during day-to-day service interactions.", "correct": false, "rationale": "That is how SLM contributes to 'deliver and support'." },
+        { "text": "It uses feedback to make services better over time.", "correct": false, "rationale": "That is how SLM contributes to 'improve'." }
+      ]
+    },
+    {
+      "id": "vcm-slm-4", "module": "practices7",
+      "stem": "How does service level management contribute to the 'obtain/build' value chain activity?",
+      "options": [
+        { "text": "It ensures users continue to be productive when they need assistance.", "correct": false, "rationale": "That describes service request management's contribution to deliver and support." },
+        { "text": "It provides objectives for component and service performance.", "correct": true, "rationale": "SLM sets performance targets that components and services must meet, giving obtain/build clear specifications." },
+        { "text": "It collects and processes feedback from customers and users.", "correct": false, "rationale": "That is how SLM contributes to 'engage'." },
+        { "text": "It provides information about actual service performance and trends.", "correct": false, "rationale": "That is how SLM contributes to 'plan'." }
+      ]
+    },
+    {
+      "id": "vcm-slm-5", "module": "practices7",
+      "stem": "How does service level management contribute to the 'deliver and support' value chain activity?",
+      "options": [
+        { "text": "It uses feedback from users to make services better.", "correct": false, "rationale": "That is how SLM contributes to 'improve'." },
+        { "text": "It provides information about actual service performance and trends.", "correct": false, "rationale": "That is how SLM contributes to 'plan'." },
+        { "text": "It collects feedback during service interactions and communicates service performance objectives to operations and support teams.", "correct": true, "rationale": "SLM ensures deliver and support knows the targets and captures real-time feedback from service interactions." },
+        { "text": "It provides feedback from customer interactions into new services.", "correct": false, "rationale": "That is how SLM contributes to 'design and transition'." }
+      ]
+    },
+    {
+      "id": "vcm-slm-6", "module": "practices7",
+      "stem": "How does service level management contribute to the 'improve' value chain activity?",
+      "options": [
+        { "text": "It provides objectives for component and service performance.", "correct": false, "rationale": "That is how SLM contributes to 'obtain/build'." },
+        { "text": "It uses feedback from users about the service and requirements from customers to make the service better.", "correct": true, "rationale": "SLM channels user and customer voice into the improvement loop, providing the evidence base for what needs to improve." },
+        { "text": "It communicates performance objectives to operations teams.", "correct": false, "rationale": "That is how SLM contributes to 'deliver and support'." },
+        { "text": "It collects and processes feedback from customers and users.", "correct": false, "rationale": "That is how SLM contributes to 'engage'. For 'improve', the emphasis is on using feedback to drive improvement." }
+      ]
+    },
+    {
+      "id": "vcm-srm-1", "module": "practices7",
+      "stem": "How does service request management contribute to the 'engage' value chain activity?",
+      "options": [
+        { "text": "It acquires pre-approved service components to fulfill requests.", "correct": false, "rationale": "That is how service request management contributes to 'obtain/build'." },
+        { "text": "It collects user-specific requirements, sets expectations, and provides status updates.", "correct": true, "rationale": "Service request management engages with users by collecting their requirements, managing expectations, and keeping them informed." },
+        { "text": "It initiates standard changes to fulfill service requests.", "correct": false, "rationale": "That is how service request management contributes to 'design and transition'." },
+        { "text": "It provides trend and quality information about requests.", "correct": false, "rationale": "That is how service request management contributes to 'improve'." }
+      ]
+    },
+    {
+      "id": "vcm-srm-2", "module": "practices7",
+      "stem": "How does service request management contribute to the 'obtain/build' value chain activity?",
+      "options": [
+        { "text": "It ensures users continue to be productive when they need assistance.", "correct": false, "rationale": "That is how service request management contributes to 'deliver and support'." },
+        { "text": "It acquires pre-approved service components to help fulfill service requests.", "correct": true, "rationale": "To fulfill requests, service request management acquires components — hardware, licences, or access — that are pre-approved." },
+        { "text": "It collects user-specific requirements and sets expectations.", "correct": false, "rationale": "That is how service request management contributes to 'engage'." },
+        { "text": "It initiates standard changes to fulfill service requests.", "correct": false, "rationale": "That is how service request management contributes to 'design and transition'." }
+      ]
+    },
+    {
+      "id": "vcm-srm-3", "module": "practices7",
+      "stem": "How does service request management contribute to the 'design and transition' value chain activity?",
+      "options": [
+        { "text": "It initiates standard changes to fulfill service requests.", "correct": true, "rationale": "Fulfilling requests often requires standard changes — provisioning accounts, granting access — which flow through design and transition." },
+        { "text": "It acquires pre-approved service components.", "correct": false, "rationale": "That is how service request management contributes to 'obtain/build'." },
+        { "text": "It provides trend and quality information about requests.", "correct": false, "rationale": "That is how service request management contributes to 'improve'." },
+        { "text": "It ensures users continue to be productive.", "correct": false, "rationale": "That is how service request management contributes to 'deliver and support'." }
+      ]
+    },
+    {
+      "id": "vcm-srm-4", "module": "practices7",
+      "stem": "How does service request management contribute to the 'deliver and support' value chain activity?",
+      "options": [
+        { "text": "It provides trend, quality, and feedback information about requests.", "correct": false, "rationale": "That is how service request management contributes to 'improve'." },
+        { "text": "It collects user-specific requirements and sets expectations.", "correct": false, "rationale": "That is how service request management contributes to 'engage'." },
+        { "text": "It ensures users continue to be productive when they need assistance from the service provider.", "correct": true, "rationale": "Service request management keeps users productive by fulfilling day-to-day requests efficiently." },
+        { "text": "It initiates standard changes to fulfill requests.", "correct": false, "rationale": "That is how service request management contributes to 'design and transition'." }
+      ]
+    },
+    {
+      "id": "vcm-srm-5", "module": "practices7",
+      "stem": "How does service request management contribute to the 'improve' value chain activity?",
+      "options": [
+        { "text": "It ensures users continue to be productive when they need assistance.", "correct": false, "rationale": "That is how service request management contributes to 'deliver and support'." },
+        { "text": "It provides trend, quality, and feedback information about fulfillment of requests.", "correct": true, "rationale": "Service request management feeds the improve activity with data on volumes, quality, and user feedback." },
+        { "text": "It acquires pre-approved service components.", "correct": false, "rationale": "That is how service request management contributes to 'obtain/build'." },
+        { "text": "It collects user-specific requirements and sets expectations.", "correct": false, "rationale": "That is how service request management contributes to 'engage'." }
+      ]
+    },
+
+    {
+      "id": "p7-ce-5", "module": "practices7",
+      "stem": "A new user account is provisioned using a fully documented procedure that has been performed hundreds of times. No additional approval is needed. What type of change is this?",
+      "options": [
+        { "text": "Standard change.", "correct": true, "rationale": "Low risk, pre-authorized, well understood, fully documented. Authorization was given when the procedure was created." },
+        { "text": "Normal change.", "correct": false, "rationale": "Normal changes require per-instance assessment and authorization. This is pre-authorized." },
+        { "text": "Emergency change.", "correct": false, "rationale": "Nothing here is urgent or unplanned." },
+        { "text": "Routine change.", "correct": false, "rationale": "'Routine' is NOT a type of change in ITIL 4. The three types are standard, normal, and emergency." }
+      ]
+    },
+    {
+      "id": "p7-ce-6", "module": "practices7",
+      "stem": "A software upgrade is planned for next month. The change is assessed for risk, scheduled on the change calendar, and will be authorized by the change authority before implementation. What type of change is this?",
+      "options": [
+        { "text": "Standard change.", "correct": false, "rationale": "Standard changes are pre-authorized and need no per-instance assessment." },
+        { "text": "Normal change.", "correct": true, "rationale": "A normal change follows the full process: scheduled, assessed for risk, and authorized before implementation." },
+        { "text": "Emergency change.", "correct": false, "rationale": "This is planned and scheduled, not urgent." },
+        { "text": "Routine change.", "correct": false, "rationale": "'Routine' is not a change type in ITIL 4. The three types are standard, normal, and emergency." }
+      ]
+    },
+    {
+      "id": "p7-ce-7", "module": "practices7",
+      "stem": "Which of the following is NOT a type of change defined in ITIL 4?",
+      "options": [
+        { "text": "Standard.", "correct": false, "rationale": "Standard is one of the three defined change types." },
+        { "text": "Normal.", "correct": false, "rationale": "Normal is one of the three defined change types." },
+        { "text": "Emergency.", "correct": false, "rationale": "Emergency is one of the three defined change types." },
+        { "text": "Routine.", "correct": true, "rationale": "'Routine' is NOT a type of change in ITIL 4. The three types are standard, normal, and emergency. This is a common exam trap." }
+      ]
+    },
+
+    {
+      "id": "p7-im-2", "module": "practices7",
+      "stem": "Who can report an incident?",
+      "options": [
+        { "text": "Only end users who are directly affected by the service disruption.", "correct": false, "rationale": "Too restrictive. Incidents can come from many sources." },
+        { "text": "Only the service desk, as the single point of contact.", "correct": false, "rationale": "The service desk is a contact point, not the only source." },
+        { "text": "Anyone — users, technical staff, or automated monitoring tools.", "correct": true, "rationale": "Incidents can be reported by users, technical staff who discover issues, or monitoring tools that detect them automatically." },
+        { "text": "Only the incident manager, after receiving an escalation.", "correct": false, "rationale": "The incident manager coordinates the response. Reporting comes from whoever detects the disruption." }
+      ]
+    },
+    {
+      "id": "p7-im-3", "module": "practices7",
+      "stem": "Which should incident management NOT include?",
+      "options": [
+        { "text": "Procedures for logging incidents.", "correct": false, "rationale": "Incident management should include logging procedures." },
+        { "text": "Procedures for managing incidents through their lifecycle.", "correct": false, "rationale": "Lifecycle management is core to the practice." },
+        { "text": "Detailed procedures for diagnosing incidents.", "correct": true, "rationale": "Detailed diagnosis procedures belong in knowledge articles or with specialist teams. Incident management focuses on logging, managing, and restoring service." },
+        { "text": "Procedures for prioritizing incidents based on business impact.", "correct": false, "rationale": "Prioritization is a core part of incident management." }
+      ]
+    },
+
+    {
+      "id": "p7-pm-4", "module": "practices7",
+      "stem": "Which is an activity of the 'problem identification' phase?",
+      "options": [
+        { "text": "Performing trend analysis of incident records.", "correct": true, "rationale": "Problem identification includes trend analysis, detecting duplicates, and analysing linked incidents to surface problems not yet known." },
+        { "text": "Logging each individual incident as it is reported.", "correct": false, "rationale": "Logging incidents is an activity of incident management, not problem identification." },
+        { "text": "Documenting a workaround for a known error.", "correct": false, "rationale": "Workarounds are part of error control, the third phase." },
+        { "text": "Implementing a permanent fix for the root cause.", "correct": false, "rationale": "Permanent fixes are error control. Problem identification is about finding problems, not fixing them." }
+      ]
+    },
+
+    {
+      "id": "p7-sd-2", "module": "practices7",
+      "stem": "Which are the four types of service desk structure described by ITIL?",
+      "options": [
+        { "text": "Help desk, call centre, technical support centre, and walk-in desk.", "correct": false, "rationale": "These describe implementations by channel, not the ITIL structural models." },
+        { "text": "Local, centralized, virtual, and follow-the-sun.", "correct": true, "rationale": "Local is co-located, centralized reduces locations, virtual uses technology to appear as one desk, follow-the-sun provides 24-hour coverage across time zones." },
+        { "text": "Tier 1, tier 2, tier 3, and specialist.", "correct": false, "rationale": "These describe escalation levels, not structural models." },
+        { "text": "Internal, external, shared, and outsourced.", "correct": false, "rationale": "These describe sourcing strategies, not service desk models." }
+      ]
+    },
+    {
+      "id": "p7-sd-3", "module": "practices7",
+      "stem": "Which of the following is NOT a recognized service desk model in ITIL 4?",
+      "options": [
+        { "text": "Local.", "correct": false, "rationale": "Local is a recognized model — co-located with users." },
+        { "text": "Centralized.", "correct": false, "rationale": "Centralized is a recognized model." },
+        { "text": "Outsourced.", "correct": true, "rationale": "'Outsourced' is a sourcing strategy, not one of the four ITIL service desk models (local, centralized, virtual, follow-the-sun)." },
+        { "text": "Virtual.", "correct": false, "rationale": "Virtual is a recognized model — staff in any location, technology makes them appear as one desk." }
+      ]
+    },
+
+    {
+      "id": "p7-slm-3", "module": "practices7",
+      "stem": "Which of the following is NOT a valid source of data for service level management?",
+      "options": [
+        { "text": "Customer feedback and surveys.", "correct": false, "rationale": "Customer feedback is a key data source for SLM." },
+        { "text": "Business-related metrics tied to customer outcomes.", "correct": false, "rationale": "Business metrics connect technical performance to business results." },
+        { "text": "Operational metrics from monitoring tools.", "correct": false, "rationale": "Operational metrics are valid, though they must be connected to outcomes to avoid the watermelon effect." },
+        { "text": "Competitor performance benchmarks.", "correct": true, "rationale": "Competitor benchmarks are NOT a recognized SLA data source. SLA data comes from customer feedback, business metrics, and operational metrics." }
+      ]
+    },
+
+    {
+      "id": "p7-ci-4", "module": "practices7",
+      "stem": "A team has confirmed that the target metrics from an improvement initiative have been met. According to the continual improvement model, what is the next step?",
+      "options": [
+        { "text": "Start a new improvement initiative from scratch.", "correct": false, "rationale": "The model has a sustaining step before the next cycle." },
+        { "text": "How do we keep the momentum going?", "correct": true, "rationale": "Step 7. After confirming success (step 6), embed and sustain the improvement, market the success, and reinforce the behaviours." },
+        { "text": "Where are we now?", "correct": false, "rationale": "Step 2 is for baselining before the improvement, not after confirming success." },
+        { "text": "Take action.", "correct": false, "rationale": "Step 5 is execution, which has already been completed." }
+      ]
+    },
+    {
+      "id": "p7-ci-5", "module": "practices7",
+      "stem": "An organization wants to adopt continual improvement practices. What approach does ITIL recommend?",
+      "options": [
+        { "text": "Adopt all recognized improvement methodologies simultaneously.", "correct": false, "rationale": "ITIL warns against trying to adopt everything at once." },
+        { "text": "Select a few key methods that suit the organization's needs.", "correct": true, "rationale": "Start with what is manageable. Trying every method at once creates confusion and reduces effectiveness." },
+        { "text": "Use only the continual improvement model and no other methods.", "correct": false, "rationale": "The model is central, but organizations should supplement it with fitting methods." },
+        { "text": "Wait until a major incident forces the organization to improve.", "correct": false, "rationale": "Reactive improvement is the anti-pattern. Continual improvement is proactive and ongoing." }
+      ]
+    },
+    {
+      "id": "p7-ci-6", "module": "practices7",
+      "stem": "A manager implements process changes but skips measuring the current state beforehand. At the end, the manager cannot demonstrate whether anything improved. Which step was skipped?",
+      "options": [
+        { "text": "What is the vision?", "correct": false, "rationale": "Step 1 defines direction. The problem is lack of evidence, which comes from skipping the baseline." },
+        { "text": "Where are we now?", "correct": true, "rationale": "Step 2 is the baseline. Without it, step 6 ('Did we get there?') is unanswerable — there is nothing to compare against." },
+        { "text": "How do we get there?", "correct": false, "rationale": "Step 4 is the plan. The manager did take action, so they had some plan." },
+        { "text": "How do we keep the momentum going?", "correct": false, "rationale": "Step 7 is about sustaining. The manager's problem is earlier — they cannot prove improvement happened." }
+      ]
+    },
+
+    {
+      "id": "p7-sr-3", "module": "practices7",
+      "stem": "An employee requests a standard laptop replacement through the service catalogue. This is a pre-defined, pre-approved action. Which practice handles this?",
+      "options": [
+        { "text": "Incident management.", "correct": false, "rationale": "Nothing is broken or disrupted." },
+        { "text": "Change enablement.", "correct": false, "rationale": "Pre-defined and pre-approved requests do not require per-instance change authorization." },
+        { "text": "Service request management.", "correct": true, "rationale": "A standard laptop replacement is a pre-defined, user-initiated request for normal service delivery." },
+        { "text": "IT asset management.", "correct": false, "rationale": "IT asset management tracks asset lifecycle, but the request itself is handled by service request management." }
+      ]
+    },
+
+    {
+      "id": "rev-1", "module": "practices15",
+      "stem": "[?] is the practice of making new and changed services and features available for use.",
+      "options": [
+        { "text": "Deployment management.", "correct": false, "rationale": "Deployment moves components into live environments. Making them AVAILABLE FOR USE is release management." },
+        { "text": "Release management.", "correct": true, "rationale": "Release management makes new and changed services and features available for use." },
+        { "text": "Change enablement.", "correct": false, "rationale": "Change enablement authorizes changes, not availability for use." },
+        { "text": "Service configuration management.", "correct": false, "rationale": "Configuration management maintains information about CIs and their relationships." }
+      ]
+    },
+    {
+      "id": "rev-2", "module": "practices15",
+      "stem": "[?] is the practice of moving new or changed hardware, software, documentation, or any other component to live environments.",
+      "options": [
+        { "text": "Release management.", "correct": false, "rationale": "Release management makes features available for use. The physical movement is deployment." },
+        { "text": "Change enablement.", "correct": false, "rationale": "Change enablement authorizes changes, not the movement itself." },
+        { "text": "Deployment management.", "correct": true, "rationale": "Deployment management moves components into live environments." },
+        { "text": "IT asset management.", "correct": false, "rationale": "IT asset management tracks lifecycle and value, not deployment." }
+      ]
+    },
+    {
+      "id": "rev-3", "module": "practices7",
+      "stem": "[?] is the practice of minimizing the negative impact of incidents by restoring normal service operation as quickly as possible.",
+      "options": [
+        { "text": "Problem management.", "correct": false, "rationale": "Problem management identifies root causes. Restoring quickly is incident management." },
+        { "text": "Incident management.", "correct": true, "rationale": "Minimize negative impact by restoring normal service operation as quickly as possible." },
+        { "text": "Change enablement.", "correct": false, "rationale": "Change enablement maximizes successful changes." },
+        { "text": "Monitoring and event management.", "correct": false, "rationale": "Monitoring detects events. It does not restore service." }
+      ]
+    },
+    {
+      "id": "rev-4", "module": "practices7",
+      "stem": "[?] is the practice of maximizing the number of successful service and product changes by ensuring risks are properly assessed, authorizing changes to proceed, and managing the change schedule.",
+      "options": [
+        { "text": "Release management.", "correct": false, "rationale": "Release management makes features available for use." },
+        { "text": "Change enablement.", "correct": true, "rationale": "This is the exact purpose. Note: MAXIMIZING successful changes, not restricting them." },
+        { "text": "Deployment management.", "correct": false, "rationale": "Deployment moves components into environments." },
+        { "text": "Service configuration management.", "correct": false, "rationale": "Configuration management ensures accurate CI information." }
+      ]
+    },
+    {
+      "id": "rev-5", "module": "practices7",
+      "stem": "[?] is the practice of setting clear business-based targets for service performance, so that delivery can be properly assessed, monitored, and managed against these targets.",
+      "options": [
+        { "text": "Service request management.", "correct": false, "rationale": "Service request management handles pre-defined user requests." },
+        { "text": "Monitoring and event management.", "correct": false, "rationale": "Monitoring observes and detects events." },
+        { "text": "Service level management.", "correct": true, "rationale": "SLM sets clear BUSINESS-BASED targets for service performance." },
+        { "text": "Relationship management.", "correct": false, "rationale": "Relationship management nurtures stakeholder links." }
+      ]
+    },
+    {
+      "id": "rev-6", "module": "practices7",
+      "stem": "[?] is the practice of capturing demand for incident resolution and service requests, and acting as the single point of contact between the service provider and its users.",
+      "options": [
+        { "text": "Incident management.", "correct": false, "rationale": "Incident management restores service. The single point of contact is the service desk." },
+        { "text": "Service request management.", "correct": false, "rationale": "Service request management handles requests but is not the single point of contact." },
+        { "text": "Relationship management.", "correct": false, "rationale": "Relationship management nurtures strategic relationships, not day-to-day contact." },
+        { "text": "Service desk.", "correct": true, "rationale": "The service desk captures demand and acts as the single point of contact between provider and users." }
+      ]
+    },
+
+    {
+      "id": "neg-pm-1", "module": "practices7",
+      "stem": "Which of the following is NOT a phase of problem management?",
+      "options": [
+        { "text": "Problem identification.", "correct": false, "rationale": "Problem identification is the first of the three phases." },
+        { "text": "Problem control.", "correct": false, "rationale": "Problem control is the second phase, where problems are analysed." },
+        { "text": "Problem logging.", "correct": true, "rationale": "'Problem logging' is NOT a phase. Logging is an activity within problem identification. The three PHASES are: problem identification, problem control, and error control." },
+        { "text": "Error control.", "correct": false, "rationale": "Error control is the third phase, managing known errors and driving permanent fixes." }
+      ]
+    }
+  ]
+}

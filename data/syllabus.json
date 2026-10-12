@@ -1,0 +1,70 @@
+{
+  "exam": {
+    "name": "ITIL 4 Foundation",
+    "body": "PeopleCert",
+    "questions": 40,
+    "minutes": 60,
+    "passMark": 26,
+    "passPct": 65,
+    "prerequisites": "None. No application, no experience audit, no mandatory training.",
+    "note": "Blueprint weights below are the official question counts per learning outcome, summing to 40."
+  },
+  "modules": [
+    {
+      "id": "concepts",
+      "name": "Key Concepts of Service Management",
+      "short": "Key Concepts",
+      "weight": 5,
+      "color": "#4fd1ff",
+      "blurb": "Value, outcomes, costs, risks, utility and warranty — the vocabulary everything else is built on."
+    },
+    {
+      "id": "principles",
+      "name": "The ITIL Guiding Principles",
+      "short": "Guiding Principles",
+      "weight": 6,
+      "color": "#7c9cff",
+      "blurb": "Seven principles. Heavily tested, and the questions are applied, not definitional."
+    },
+    {
+      "id": "dimensions",
+      "name": "The Four Dimensions",
+      "short": "Four Dimensions",
+      "weight": 2,
+      "color": "#fbbf24",
+      "blurb": "Organizations and people, information and technology, partners and suppliers, value streams and processes."
+    },
+    {
+      "id": "svs",
+      "name": "The Service Value System",
+      "short": "SVS",
+      "weight": 1,
+      "color": "#f472b6",
+      "blurb": "How the components fit together, and what governance and continual improvement do inside it."
+    },
+    {
+      "id": "valuechain",
+      "name": "The Service Value Chain",
+      "short": "Value Chain",
+      "weight": 2,
+      "color": "#a78bfa",
+      "blurb": "Six activities: plan, improve, engage, design and transition, obtain/build, deliver and support."
+    },
+    {
+      "id": "practices15",
+      "name": "15 Practices — Purpose and Key Terms",
+      "short": "15 Practices",
+      "weight": 7,
+      "color": "#34d399",
+      "blurb": "Recall level only. Includes release management and deployment management — your lane."
+    },
+    {
+      "id": "practices7",
+      "name": "7 Practices — In Detail",
+      "short": "7 In Detail",
+      "weight": 17,
+      "color": "#fb923c",
+      "blurb": "The heaviest section by far. Change enablement, incident, problem, service request, service desk, SLM, continual improvement."
+    }
+  ]
+}

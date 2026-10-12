@@ -1,0 +1,434 @@
+{
+  "note": "Read-first briefs, one per syllabus section. Format is fixed: the list, 2-3 sentences on each item, then a bare terms list. Terms are deliberately NOT defined here — they are the ask-Claude list.",
+  "briefs": {
+    "concepts": {
+      "lead": "This section is vocabulary. Nothing here is hard to do — the trap is that ITIL defines words you already use, and it defines them narrowly.",
+      "listLabel": "What this section covers",
+      "list": [
+        "Value, and who judges it",
+        "Service, service offering, service relationship",
+        "Output vs outcome",
+        "Cost and risk — both directions",
+        "Utility and warranty"
+      ],
+      "items": [
+        {
+          "name": "Value",
+          "body": "The perceived benefits, usefulness, and importance of something. 'Perceived' is the operative word and it gets tested — value is judged by the stakeholder, not asserted by the provider. Two consumers can get identical service and perceive completely different value."
+        },
+        {
+          "name": "Service",
+          "body": "A means of enabling value co-creation by facilitating outcomes customers want, without the customer having to manage specific costs and risks. Note what's built into the definition: the provider absorbs cost and risk on the consumer's behalf. Value is co-created — the provider cannot deliver it alone."
+        },
+        {
+          "name": "Service offering",
+          "body": "A formal description of one or more services, designed for a specific target consumer group. An offering can bundle three things: goods, access to resources, and service actions. This is the packaged, named thing a consumer picks from — not the same as the service itself."
+        },
+        {
+          "name": "Output vs outcome",
+          "body": "An output is a deliverable of an activity. An outcome is a result for a stakeholder, enabled by one or more outputs. This is your release that shipped every planned feature on time and moved nothing for the business: outputs delivered, outcome missed. The exam will describe exactly that scenario and expect you to name the gap."
+        },
+        {
+          "name": "Cost and risk — both directions",
+          "body": "Services remove some costs and risks from the consumer, and impose others on them. The provider carries the infrastructure and operational risk; the consumer picks up fees, adoption effort, and dependence on the provider. Any answer claiming the flow only goes one way is wrong."
+        },
+        {
+          "name": "Utility and warranty",
+          "body": "Utility is fitness for purpose — what the service does. Warranty is fitness for use — how well it performs: availability, capacity, security, continuity. Both are required for value; a service with perfect uptime that does the wrong thing has warranty and no utility. Reversing these two is the single most common miss on this section."
+        },
+        {
+          "name": "The three consumer roles",
+          "body": "ITIL splits the consumer side into customer, user, and sponsor — the one who defines requirements, the one who actually uses the service, and the one who authorizes the budget. One person can hold all three, or they can be three different people with conflicting views. Questions use the specific role name to signal which perspective matters."
+        },
+        {
+          "name": "Service management",
+          "body": "A set of specialized organizational capabilities for enabling value to customers in the form of services. The key phrase is 'specialized organizational capabilities' — it describes what the organization can do, not a framework or a process."
+        },
+        {
+          "name": "Organization and risk",
+          "body": "An organization is a person or group of people that has its own functions with responsibilities, authorities, and relationships to achieve its objectives — even a single person counts. Risk is a possible event that could cause harm or loss, or make it more difficult to achieve objectives."
+        },
+        {
+          "name": "Service provision, consumption, and relationship management",
+          "body": "Service provision is the provider-side activities: managing resources, ensuring access, fulfilling service actions. Service consumption is the consumer-side: managing the resources needed to use the service. Service relationship management is the joint activities performed by both to ensure continual value co-creation. These three concepts connect the provider and consumer sides of a service."
+        }
+      ],
+      "note": "When a question asks 'what is value', the answer will contain the word perceived. When it asks about a service, the answer will mention outcomes and the customer not managing costs and risks. The wording is that formulaic.",
+      "terms": [
+        "co-creation of value",
+        "service provision",
+        "service consumption",
+        "service relationship management",
+        "service management",
+        "organization",
+        "risk",
+        "goods",
+        "access to resources",
+        "service actions",
+        "sponsor",
+        "shared resources",
+        "demand",
+        "opportunity",
+        "service level"
+      ]
+    },
+
+    "principles": {
+      "lead": "Seven principles, six exam questions, and almost none of them ask you to recite a definition. They give you a scenario and ask which principle it demonstrates — so read these as behaviours, not slogans.",
+      "listLabel": "The seven guiding principles",
+      "list": [
+        "Focus on value",
+        "Start where you are",
+        "Progress iteratively with feedback",
+        "Collaborate and promote visibility",
+        "Think and work holistically",
+        "Keep it simple and practical",
+        "Optimize and automate"
+      ],
+      "items": [
+        {
+          "name": "Focus on value",
+          "body": "Everything the organization does must link back, directly or indirectly, to value for a stakeholder. That requires knowing who the consumer actually is and what their real experience is — not what your dashboard says it is. In scenario questions this one is almost always too general to be the answer; if a more specific principle fits, pick that."
+        },
+        {
+          "name": "Start where you are",
+          "body": "Do not scrap and rebuild by reflex. Observe and measure the current state directly, because existing services, people, and processes usually contain reusable value. This is what you did every time you pulled the runbook and sat in on release calls before proposing anything."
+        },
+        {
+          "name": "Progress iteratively with feedback",
+          "body": "Break work into smaller timeboxed sections, each of which finishes and delivers something usable. Build feedback loops in before, during, and after each iteration rather than saving feedback for the end. Any answer proposing one big initiative is the distractor for this one."
+        },
+        {
+          "name": "Collaborate and promote visibility",
+          "body": "Involve the right people, and make work and its consequences visible to them. Poor visibility drives poor decisions and hidden work. Publishing a live deployment tracker so every team can see status and blockers is the textbook example — that's this principle, not 'focus on value'."
+        },
+        {
+          "name": "Think and work holistically",
+          "body": "No service, practice, or component stands alone. Optimizing one part in isolation commonly degrades the system as a whole. When a question warns about a local improvement making the overall result worse, this is the answer."
+        },
+        {
+          "name": "Keep it simple and practical",
+          "body": "Use the minimum number of steps that achieves the objective, and delete anything producing no value. Design for the majority of cases and handle exceptions as exceptions, rather than designing every edge case up front. Compliance controls still have to justify themselves like any other step."
+        },
+        {
+          "name": "Optimize and automate",
+          "body": "The order is the point: optimize first, then automate. Automating an unoptimized process just makes the waste run faster. Automate where it adds value, not everywhere that is technically possible."
+        }
+      ],
+      "note": "Two habits that pay off here. First, when 'focus on value' appears alongside a more specific principle, the specific one wins. Second, watch for reversed-order traps on 'optimize and automate'.",
+      "terms": [
+        "timebox",
+        "iteration",
+        "feedback loop",
+        "minimum viable improvement",
+        "outcome-based thinking",
+        "silo",
+        "hand-off",
+        "big bang",
+        "Lean",
+        "Agile",
+        "DevOps",
+        "continuous improvement culture"
+      ]
+    },
+
+    "dimensions": {
+      "lead": "Four lenses that must all be considered for any service. Only two exam questions come from here, and they are usually 'name the four' or 'which dimension does this scenario touch'.",
+      "listLabel": "The four dimensions of service management",
+      "list": [
+        "Organizations and people",
+        "Information and technology",
+        "Partners and suppliers",
+        "Value streams and processes"
+      ],
+      "items": [
+        {
+          "name": "Organizations and people",
+          "body": "Who does the work and how they are arranged: structures, roles, responsibilities, competencies, and the culture they operate in. ITIL cares whether the culture actually supports the way of working, not just whether the org chart looks right. A reorg that leaves the old incentives in place fails this dimension."
+        },
+        {
+          "name": "Information and technology",
+          "body": "The information a service creates, manages, and depends on, plus the technology that carries it. It also covers how that information is protected and who is allowed to see it. The question to ask is 'what does this service know, and what does it run on'."
+        },
+        {
+          "name": "Partners and suppliers",
+          "body": "Every other organization involved in designing, building, delivering, or supporting the service. Covers contracts, agreements, and how much the organization chooses to do itself versus buy in. Whenever an outside company touches the service, this is the dimension in play."
+        },
+        {
+          "name": "Value streams and processes",
+          "body": "How the pieces work together in sequence to actually produce something of value. A value stream is the end-to-end path from demand to value; a process is a defined set of steps that turns inputs into outputs. This is the 'how does work actually flow here' dimension."
+        }
+      ],
+      "note": "All four dimensions are pushed on from outside by factors the organization does not control — that external set has an acronym, and it is in the terms list below.",
+      "terms": [
+        "PESTLE",
+        "managed service partner",
+        "sourcing strategy",
+        "service integration and management (SIAM)",
+        "insourcing",
+        "outsourcing",
+        "workforce and talent planning",
+        "organizational culture",
+        "information architecture",
+        "third party",
+        "value stream",
+        "process"
+      ]
+    },
+
+    "svs": {
+      "lead": "The service value system is the container everything else sits in. One exam question comes from here, usually 'what is its purpose' or 'which of these is a component'.",
+      "listLabel": "The five components of the SVS",
+      "list": [
+        "Guiding principles",
+        "Governance",
+        "Service value chain",
+        "Practices",
+        "Continual improvement"
+      ],
+      "items": [
+        {
+          "name": "What the SVS is for",
+          "body": "It describes how all the components and activities of the organization work together to create value. Opportunity and demand go in; value comes out. Its stated purpose is to ensure the organization co-creates value consistently — and to stop the organization fragmenting into silos that each optimize themselves."
+        },
+        {
+          "name": "Guiding principles",
+          "body": "The seven recommendations that apply in every situation, regardless of what changes in goals, strategy, or structure. They are the SVS component that shapes how everything else is done."
+        },
+        {
+          "name": "Governance",
+          "body": "How the organization is directed and controlled — the evaluate, direct, and monitor loop sitting above the working parts. This is the layer that sets policy and holds the organization to it, distinct from the day-to-day management of services."
+        },
+        {
+          "name": "Service value chain",
+          "body": "The operating model: six activities that combine in different sequences to convert demand into value. The next section covers these in detail."
+        },
+        {
+          "name": "Practices",
+          "body": "The 34 sets of organizational resources designed for performing work. Foundation asks you to recall the purpose of 15 of them and understand 7 in real detail — the last two sections of this app."
+        },
+        {
+          "name": "Continual improvement",
+          "body": "Improvement is both a component of the SVS and a practice inside it, which is why it appears twice. It applies to every component, every practice, and all four dimensions, and it is everyone's responsibility."
+        }
+      ],
+      "note": "If a question calls the SVS a maturity model, a contract, or a ranked list of practices, that answer is wrong.",
+      "terms": [
+        "opportunity",
+        "demand",
+        "governance",
+        "evaluate, direct and monitor",
+        "compliance",
+        "organizational silo",
+        "operating model",
+        "organizational agility",
+        "organizational resilience"
+      ]
+    },
+
+    "valuechain": {
+      "lead": "Six activities that combine in different orders to form value streams. Two exam questions, usually 'name the six' or 'which activity has this purpose'. The order is not fixed and questions may test that you know it isn't.",
+      "listLabel": "The six service value chain activities",
+      "list": [
+        "Plan",
+        "Improve",
+        "Engage",
+        "Design and transition",
+        "Obtain/build",
+        "Deliver and support"
+      ],
+      "items": [
+        {
+          "name": "Plan",
+          "body": "Ensures a shared understanding of the vision, current status, and improvement direction — for all four dimensions and all products and services. If a question mentions shared vision or direction across the organization, this is the activity."
+        },
+        {
+          "name": "Improve",
+          "body": "Ensures continual improvement of products, services, and practices across every value chain activity and all four dimensions. Distinguish it from Plan: Plan sets direction, Improve raises the level of what already exists."
+        },
+        {
+          "name": "Engage",
+          "body": "Provides a good understanding of stakeholder needs, plus transparency and ongoing relationships with all stakeholders. This is the activity that faces outward — customers, users, suppliers, partners."
+        },
+        {
+          "name": "Design and transition",
+          "body": "Ensures products and services continually meet stakeholder expectations for quality, cost, and time to market. Note that all three of those are named — a question mentioning time to market is pointing here."
+        },
+        {
+          "name": "Obtain/build",
+          "body": "Ensures service components are available when and where they are needed, and that they meet agreed specifications. Covers both building in-house and procuring from outside."
+        },
+        {
+          "name": "Deliver and support",
+          "body": "Ensures services are delivered and supported according to agreed specifications and stakeholder expectations. This is where the service desk, incident, and request work lives day to day."
+        }
+      ],
+      "note": "The value chain replaced the old ITIL v3 lifecycle (strategy, design, transition, operation, CSI). If those five appear as an option, that's the trap answer.",
+      "terms": [
+        "value stream",
+        "operating model",
+        "service catalogue",
+        "product",
+        "service component",
+        "third-party service",
+        "time to market",
+        "agreed specification"
+      ]
+    },
+
+    "practices15": {
+      "lead": "A practice is a set of organizational resources designed for performing work. There are 34; Foundation asks you to recall the purpose of 15 of them. Seven of those 15 need real depth and get their own section — this brief covers the other eight, where a one-line purpose is genuinely all you need.",
+      "listLabel": "The 15 practices you must know the purpose of",
+      "list": [
+        "Information security management",
+        "Relationship management",
+        "Supplier management",
+        "IT asset management",
+        "Monitoring and event management",
+        "Release management",
+        "Service configuration management",
+        "Deployment management",
+        "— the seven below are covered in the next section —",
+        "Continual improvement",
+        "Change enablement",
+        "Incident management",
+        "Problem management",
+        "Service request management",
+        "Service desk",
+        "Service level management"
+      ],
+      "items": [
+        {
+          "name": "Information security management",
+          "body": "Protects the information the organization needs to conduct its business. Covers confidentiality, integrity, and availability, plus authentication and non-repudiation. Note it is about protecting information, not about running access requests — those are service requests."
+        },
+        {
+          "name": "Relationship management",
+          "body": "Establishes and nurtures links between the organization and its stakeholders at strategic and tactical levels. This is the relationship side, distinct from the commercial contract side, which is supplier management."
+        },
+        {
+          "name": "Supplier management",
+          "body": "Ensures the organization's suppliers and their performance are managed appropriately, to support the seamless provision of quality products and services. Contracts, performance against them, and the sourcing relationship."
+        },
+        {
+          "name": "IT asset management",
+          "body": "Plans and manages the full lifecycle of all IT assets, to maximize value, control costs, manage risks, and support decisions about purchase, reuse, and retirement. Easily confused with service configuration management — asset management cares about ownership, cost, and lifecycle; configuration management cares about relationships and how things are wired together."
+        },
+        {
+          "name": "Monitoring and event management",
+          "body": "Systematically observes services and service components, and records and reports selected changes of state identified as events. It determines the significance of events and the right response. It detects; it does not restore — restoring is incident management."
+        },
+        {
+          "name": "Release management",
+          "body": "Makes new and changed services and features available for use. Availability for use is the whole definition. This is your lane, and ITIL splits it from deployment in a way most enterprises do not."
+        },
+        {
+          "name": "Deployment management",
+          "body": "Moves new or changed hardware, software, documentation, processes, or any other component into live environments. It may also deploy to staging or test. The physical movement of the component — regardless of whether anyone can use it yet."
+        },
+        {
+          "name": "Service configuration management",
+          "body": "Ensures accurate and reliable information about the configuration of services, and about the configuration items that support them, is available when and where it is needed. It is about relationships and dependencies — what is connected to what. Your monorepo blast-radius assessment was configuration thinking."
+        }
+      ],
+      "note": "Release vs deployment is the pair to burn in, because it is counterintuitive and it is your subject. A feature pushed to production behind a flag that is switched off has been DEPLOYED but not RELEASED. Flip it: a feature can be released to users the instant a flag flips, with no deployment happening at all that day.",
+      "terms": [
+        "configuration item (CI)",
+        "configuration management database (CMDB)",
+        "configuration management system (CMS)",
+        "IT asset",
+        "asset lifecycle",
+        "event: informational, warning, exception",
+        "release schedule",
+        "deployment model",
+        "continuous delivery",
+        "phased deployment",
+        "big bang deployment",
+        "pull deployment",
+        "push deployment",
+        "confidentiality, integrity, availability (CIA)",
+        "non-repudiation",
+        "service catalogue"
+      ]
+    },
+
+    "practices7": {
+      "lead": "Seventeen of the forty exam questions come from this section — more than everything else combined. These seven practices must be understood, not just recalled: the questions describe a situation and ask which practice owns it, or what should happen next.",
+      "listLabel": "The seven practices covered in detail",
+      "list": [
+        "Continual improvement",
+        "Change enablement",
+        "Incident management",
+        "Problem management",
+        "Service request management",
+        "Service desk",
+        "Service level management"
+      ],
+      "items": [
+        {
+          "name": "Continual improvement",
+          "body": "Aligns the organization's practices and services with changing business needs through ongoing improvement. Its model has seven steps, starting with 'What is the vision?' and ending with 'How do we keep the momentum going?'. Two facts get tested hard: improvement is everyone's responsibility, and the step organizations skip is 'Where are we now?' — skip the baseline and you can never answer 'Did we get there?'."
+        },
+        {
+          "name": "Change enablement",
+          "body": "Maximizes the number of successful service and product changes by ensuring risks are properly assessed, authorizing changes to proceed, and managing the change schedule. Read that emphasis again: MAXIMIZE successful changes. It is not a gate whose job is to say no, and answers framing it as restriction are wrong. Three change types — standard is pre-authorized and needs no per-instance approval, normal goes through assessment and authorization, emergency is expedited with documentation often following the fix."
+        },
+        {
+          "name": "Incident management",
+          "body": "Minimizes the negative impact of incidents by restoring normal service operation as quickly as possible. Speed of restoration is the objective, and finding the root cause explicitly is not. An incident closes when service is restored, even if that restoration is a workaround and the underlying fault is still there. Anyone can report an incident — users, technical staff, or automated monitoring tools. Incident management should NOT include detailed procedures for diagnosing incidents; those belong in knowledge articles or with specialist teams."
+        },
+        {
+          "name": "Problem management",
+          "body": "Reduces the likelihood and impact of incidents by identifying actual and potential causes, and managing workarounds and known errors. Three phases: problem identification, problem control, error control. Problem identification activities include trend analysis of incident records, detecting duplicates and recurring incidents, and analysing information from other practices. A problem that has been analysed but not resolved is a known error, and it lives in error control until a permanent fix lands."
+        },
+        {
+          "name": "Service request management",
+          "body": "Supports the agreed quality of service by handling all pre-defined, user-initiated service requests effectively and in a user-friendly way. Requests are normal parts of service delivery, already agreed and already authorized — nothing is broken. Because they are pre-defined, they should be standardized and automated wherever possible."
+        },
+        {
+          "name": "Service desk",
+          "body": "Captures demand for incident resolution and service requests, and acts as the single point of contact between the service provider and all of its users. It is the entry point, not necessarily the thing that fixes the problem — escalation is normal and expected. Its real value is often as the empathetic front door, not as a technical resolver. Four structural models: local (co-located with users), centralized (fewer locations), virtual (technology makes distributed staff appear as one desk), and follow-the-sun (24-hour coverage across time zones)."
+        },
+        {
+          "name": "Service level management",
+          "body": "Sets clear business-based targets for service performance so that delivery can be properly assessed, monitored, and managed against those targets. 'Business-based' is deliberate and heavily tested. The named failure mode is the watermelon effect: every technical metric green on the outside, user experience red on the inside — which is why SLAs must relate to defined outcomes, not component metrics. Three valid SLA data sources: customer feedback, business-related metrics, and operational metrics. Competitor benchmarks are NOT a valid source."
+        }
+      ],
+      "note": "The distinctions that decide most of these 17 questions: incident (restore it) vs problem (understand it) vs known error (understood, not fixed yet) vs event (a change of state, often harmless) vs service request (nothing is broken, someone wants something normal). If you can sort a scenario into the right bucket, the rest of the answer usually follows. TRAP: 'routine' is NOT a type of change — the three types are standard, normal, and emergency. TRAP: 'outsourced' is NOT a service desk model — the four models are local, centralized, virtual, and follow-the-sun.",
+      "terms": [
+        "change authority",
+        "change advisory board (CAB)",
+        "emergency change advisory board (ECAB)",
+        "change schedule",
+        "change model",
+        "post-implementation review",
+        "remediation planning",
+        "major incident",
+        "swarming",
+        "hierarchic escalation",
+        "functional escalation",
+        "known error database (KEDB)",
+        "workaround",
+        "root cause analysis",
+        "service request catalogue",
+        "fulfilment",
+        "omnichannel",
+        "single point of contact",
+        "shift-left",
+        "service level agreement (SLA)",
+        "service level target",
+        "watermelon effect",
+        "customer engagement",
+        "local service desk",
+        "centralized service desk",
+        "virtual service desk",
+        "follow-the-sun service desk",
+        "routine (NOT a change type — exam trap)",
+        "trend analysis (problem identification)",
+        "practice-to-value-chain mapping",
+        "information radiator",
+        "escalation"
+      ]
+    }
+  }
+}
