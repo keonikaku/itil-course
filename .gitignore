@@ -1,0 +1,9 @@
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Internal working documents — not part of the app
+DION-GAP-ANALYSIS.md
+OTTO-REVIEW.md
+RESEARCH-itil-cost.md
