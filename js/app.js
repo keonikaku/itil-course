@@ -470,7 +470,7 @@
     b.items.forEach(function (it) {
       items.appendChild(el('div', { class: 'brief-item' },
         el('h3', { class: 'brief-item-name' }, it.name),
-        el('p', { class: 'brief-item-body' }, it.body)));
+        el('p', { class: 'brief-item-body', html: it.body })));
     });
 
     var terms = el('div', { class: 'term-chips' });
